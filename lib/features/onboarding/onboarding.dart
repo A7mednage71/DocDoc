@@ -14,20 +14,22 @@ class Onboarding extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(top: 20.h),
-          child: Column(
-            children: [
-              const LogoNameSection(),
-              SizedBox(height: 40.h),
-              const DoctorImageAndBackgoundSection(),
-              SizedBox(height: 18.h),
-              Text(
-                "Manage and schedule all of your medical appointments easily\n with Docdoc to get a new experience.",
-                style: AppStyles.font10with400w,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 32.h),
-              const GetStartedButton()
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const LogoNameSection(),
+                SizedBox(height: 40.h),
+                const DoctorImageAndBackgoundSection(),
+                SizedBox(height: 18.h),
+                Text(
+                  "Manage and schedule all of your medical appointments easily\n with Docdoc to get a new experience.",
+                  style: AppStyles.font10with400w,
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 32.h),
+                const GetStartedButton()
+              ],
+            ),
           ),
         ),
       ),

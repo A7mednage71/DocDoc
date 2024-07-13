@@ -11,6 +11,7 @@ class DoctorImageAndBackgoundSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: AlignmentDirectional.topCenter,
       children: [
         SvgPicture.asset(
           Assets.assetsSvgsDoctorBackground,
