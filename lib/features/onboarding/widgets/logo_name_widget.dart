@@ -15,7 +15,7 @@ class LogoNameSection extends StatelessWidget {
         SvgPicture.asset(Assets.assetsSvgsFrame),
         SizedBox(width: 8.w),
         Text(
-          "DocDoc",
+          "Docdoc",
           style: AppStyles.font24Black700weight,
         )
       ],
