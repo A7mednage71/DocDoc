@@ -1,3 +1,4 @@
+import 'package:doc/core/helpers/app_assets.dart';
 import 'package:doc/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +12,7 @@ class LogoNameSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset('assets/svgs/Frame.svg'),
+        SvgPicture.asset(Assets.assetsSvgsFrame),
         SizedBox(width: 8.w),
         Text(
           "DocDoc",
