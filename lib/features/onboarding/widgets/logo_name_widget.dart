@@ -16,7 +16,7 @@ class LogoNameSection extends StatelessWidget {
         SizedBox(width: 8.w),
         Text(
           "Docdoc",
-          style: AppStyles.font24Black700weight,
+          style: AppStyles.font32Black700weight,
         )
       ],
     );
