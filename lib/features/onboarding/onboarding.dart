@@ -1,6 +1,8 @@
+import 'package:doc/core/helpers/navigation_extention.dart';
+import 'package:doc/core/routing/routes.dart';
 import 'package:doc/core/theme/app_styles.dart';
+import 'package:doc/core/widgets/app_custom_button.dart';
 import 'package:doc/features/onboarding/widgets/doctor_and_background_section.dart';
-import 'package:doc/features/onboarding/widgets/get_started_button.dart';
 import 'package:doc/features/onboarding/widgets/logo_name_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,7 +29,15 @@ class Onboarding extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 32.h),
-                const GetStartedButton()
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: AppCustomButton(
+                    onPressed: () {
+                      context.pushNamed(Routes.loginView);
+                    },
+                    text: "GetStarted",
+                  ),
+                )
               ],
             ),
           ),
