@@ -19,4 +19,27 @@ class AppStyles {
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
+
+  static TextStyle fontweight700blue = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+    color: const Color(0xff247CFF),
+  );
+
+  static TextStyle fontweight500grey = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: const Color(0xffC2C2C2),
+  );
+
+  static TextStyle font12with400w = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: const Color(0xff247CFF),
+  );
+  static TextStyle font12with400wgrey = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: const Color(0xff9E9E9E),
+  );
 }
