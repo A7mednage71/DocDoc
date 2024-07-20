@@ -1,3 +1,5 @@
+import 'package:doc/core/helpers/navigation_extention.dart';
+import 'package:doc/core/routing/routes.dart';
 import 'package:doc/core/theme/app_colors.dart';
 import 'package:doc/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +14,9 @@ class GetStartedButton extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.loginView);
+          },
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.mainColor,
               fixedSize: const Size(double.infinity, 60),
