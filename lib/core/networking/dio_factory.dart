@@ -13,7 +13,7 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
-
+      // for better readability and conversion.
       addDioInterceptors();
       return dio!;
     } else {
@@ -31,3 +31,6 @@ class DioFactory {
     );
   }
 }
+
+// The singleton pattern is well-implemented using a private constructor and a static method. 
+// This ensures that only one instance of Dio is created throughout the application.
