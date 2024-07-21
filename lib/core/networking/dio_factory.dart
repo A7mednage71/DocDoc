@@ -14,14 +14,14 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
 
-      addDiointerceptors();
+      addDioInterceptors();
       return dio!;
     } else {
       return dio!;
     }
   }
 
-  static void addDiointerceptors() {
+  static void addDioInterceptors() {
     dio?.interceptors.add(
       PrettyDioLogger(
         requestBody: true,
