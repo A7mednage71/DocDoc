@@ -1,9 +1,9 @@
 import 'package:doc/core/widgets/app_custom_button.dart';
 import 'package:doc/core/widgets/app_text_form_field.dart';
-import 'package:doc/features/login/ui/widgets/check_for_having_accont.dart';
-import 'package:doc/features/login/ui/widgets/forget_password_button.dart';
-import 'package:doc/features/login/ui/widgets/login_screen_upper_section.dart';
-import 'package:doc/features/login/ui/widgets/privacy_custom_Richtext.dart';
+import 'package:doc/features/login/ui/views/widgets/check_for_having_accont.dart';
+import 'package:doc/features/login/ui/views/widgets/forget_password_button.dart';
+import 'package:doc/features/login/ui/views/widgets/login_screen_upper_section.dart';
+import 'package:doc/features/login/ui/views/widgets/privacy_custom_Richtext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
