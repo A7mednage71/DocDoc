@@ -16,14 +16,40 @@ class LoginScreenForm extends StatefulWidget {
 }
 
 class _LoginScreenFormState extends State<LoginScreenForm> {
+  late TextEditingController passwordController;
   AutovalidateMode autovalidateMode = AutovalidateMode.always;
   bool obsecured = true;
 
-  bool haslowercase = true;
+  bool haslowercase = false;
   bool hasUppercase = false;
   bool hasSpecialChar = false;
   bool hasNumber = false;
   bool hasMinlength = false;
+
+  @override
+  initState() {
+    super.initState();
+    passwordController = context.read<LoginCubit>().passwordController;
+    passwordListener();
+  }
+
+  void passwordListener() {
+    passwordController.addListener(() {
+      setState(() {
+        haslowercase = AppRegex.hasLowerCase(passwordController.text);
+        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
+        hasSpecialChar = AppRegex.hasSpecialCharacter(passwordController.text);
+        hasNumber = AppRegex.hasNumber(passwordController.text);
+        hasMinlength = AppRegex.hasMinLength(passwordController.text);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
