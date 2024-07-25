@@ -57,13 +57,23 @@ class MyValidators {
     return null;
   }
 
-
   static String? repeatPasswordValidator({String? value, String? password}) {
     if (value!.isEmpty) {
       return 'Please Confirm Your password';
     }
     if (value != password) {
       return 'Passwords do not match';
+    }
+    return null;
+  }
+
+  static String? phoneNumberValidator(String? phoneNumber) {
+    final phoneRegExp = RegExp(r'^(010|011|012|015)[0-9]{8}$');
+
+    if (phoneNumber == null || phoneNumber.isEmpty) {
+      return 'Please enter a phone number';
+    } else if (!phoneRegExp.hasMatch(phoneNumber)) {
+      return 'Invalid phone number format';
     }
     return null;
   }
