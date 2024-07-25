@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const LoginScreenUpperSection(),
                 const LoginScreenForm(),
-                SizedBox(height: 25.h),
+                SizedBox(height: 15.h),
                 const ForgetPasswordButton(),
                 SizedBox(height: 32.h),
                 AppCustomButton(
@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                   },
                   text: "Login",
                 ),
-                SizedBox(height: 90.h),
+                SizedBox(height: 10.h),
                 const PrivacyPolicyCutomRichText(),
                 SizedBox(height: 24.h),
                 const CheckForHavingAccountWidget()
