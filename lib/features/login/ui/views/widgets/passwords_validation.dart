@@ -44,7 +44,7 @@ class PasswordsValidation extends StatelessWidget {
           text,
           style: TextStyle(
             decorationThickness: 2,
-            color: isActivated ? Colors.blueGrey : Colors.grey,
+            color: isActivated ? Colors.blueGrey : Colors.black,
             decorationColor: Colors.green,
             decoration:
                 isActivated ? TextDecoration.lineThrough : TextDecoration.none,
