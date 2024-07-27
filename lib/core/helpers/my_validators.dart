@@ -5,8 +5,7 @@ class MyValidators {
     if (value == null || value.isEmpty) {
       return 'Please enter a username';
     } else if (!usernameRegExp.hasMatch(value)) {
-      return '''Username must be at least 3 characters long and
-       can contain letters, numbers, dots,underscores, and hyphens''';
+      return 'Invalid username must be at least 3+ chars: letters, numbers, dots, underscores, hyphens';
     }
     return null;
   }
