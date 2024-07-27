@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:doc/features/login/data/models/login_request_body.dart';
 import 'package:doc/features/login/data/repos/login_repo.dart';
 import 'package:doc/features/login/ui/manager/cubit/login_state.dart';
@@ -14,7 +15,8 @@ class LoginCubit extends Cubit<LoginState> {
 
   Future<void> login({required LoginRequestBody loginRequestBody}) async {
     emit(const LoginState.loading());
-    final result = await _loginRepo.login(loginRequestBody: loginRequestBody);
+    final result = await _loginRepo.login(
+        loginRequestBody: FormData.fromMap(loginRequestBody.toJson()));
     result.when(
       success: (data) {
         emit(LoginState.success(data));
