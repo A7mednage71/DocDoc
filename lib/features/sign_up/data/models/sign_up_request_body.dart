@@ -10,6 +10,7 @@ class SignUpRequestBody {
   final String password;
   @JsonKey(name: "password_confirmation")
   final String confirmPassword;
+  final int gender;
 
   SignUpRequestBody({
     required this.name,
@@ -17,6 +18,7 @@ class SignUpRequestBody {
     required this.phoneNumber,
     required this.password,
     required this.confirmPassword,
+    required this.gender,
   });
 
   factory SignUpRequestBody.fromJson(Map<String, dynamic> json) =>

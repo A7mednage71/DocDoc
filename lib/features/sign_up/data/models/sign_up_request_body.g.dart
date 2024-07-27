@@ -13,6 +13,7 @@ SignUpRequestBody _$SignUpRequestBodyFromJson(Map<String, dynamic> json) =>
       phoneNumber: (json['phoneNumber'] as num).toInt(),
       password: json['password'] as String,
       confirmPassword: json['password_confirmation'] as String,
+      gender: (json['gender'] as num).toInt(),
     );
 
 Map<String, dynamic> _$SignUpRequestBodyToJson(SignUpRequestBody instance) =>
@@ -22,4 +23,5 @@ Map<String, dynamic> _$SignUpRequestBodyToJson(SignUpRequestBody instance) =>
       'phoneNumber': instance.phoneNumber,
       'password': instance.password,
       'password_confirmation': instance.confirmPassword,
+      'gender': instance.gender,
     };
