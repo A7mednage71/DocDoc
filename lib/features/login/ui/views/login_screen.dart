@@ -1,9 +1,11 @@
-import 'package:doc/features/login/ui/views/widgets/check_for_having_accont.dart';
+import 'package:doc/core/helpers/navigation_extention.dart';
+import 'package:doc/core/routing/routes.dart';
+import 'package:doc/core/widgets/check_for_having_accont.dart';
+import 'package:doc/core/widgets/privacy_custom_Richtext.dart';
 import 'package:doc/features/login/ui/views/widgets/forget_password_button.dart';
 import 'package:doc/features/login/ui/views/widgets/login_button.dart';
 import 'package:doc/features/login/ui/views/widgets/login_screen_form.dart';
 import 'package:doc/features/login/ui/views/widgets/login_screen_upper_section.dart';
-import 'package:doc/features/login/ui/views/widgets/privacy_custom_Richtext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +31,13 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 10.h),
                 const PrivacyPolicyCutomRichText(),
                 SizedBox(height: 24.h),
-                const CheckForHavingAccountWidget()
+                CheckForHavingAccountWidget(
+                  buttonName: "Sign Up",
+                  checkText: "Don't have an account?",
+                  onPressed: () {
+                    context.pushNamed(Routes.signUP);
+                  },
+                )
               ],
             ),
           ),

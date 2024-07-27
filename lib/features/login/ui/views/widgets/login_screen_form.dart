@@ -1,7 +1,7 @@
 import 'package:doc/core/helpers/my_validators.dart';
 import 'package:doc/core/widgets/app_text_form_field.dart';
 import 'package:doc/features/login/ui/manager/cubit/login_cubit.dart';
-import 'package:doc/features/login/ui/views/widgets/passwords_validation.dart';
+import 'package:doc/core/widgets/passwords_validation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
