@@ -12,7 +12,7 @@ class CheckForHavingAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Already have an account yet?",
+          "Don't have an account yet?",
           style: AppStyles.font12with400wgrey,
         ),
         TextButton(
