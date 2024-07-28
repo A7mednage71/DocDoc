@@ -6,7 +6,7 @@ part 'sign_up_request_body.g.dart';
 class SignUpRequestBody {
   final String name;
   final String email;
-  final int phoneNumber;
+  final String phone;
   final String password;
   @JsonKey(name: "password_confirmation")
   final String confirmPassword;
@@ -15,7 +15,7 @@ class SignUpRequestBody {
   SignUpRequestBody({
     required this.name,
     required this.email,
-    required this.phoneNumber,
+    required this.phone,
     required this.password,
     required this.confirmPassword,
     required this.gender,

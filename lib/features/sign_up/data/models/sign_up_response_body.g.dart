@@ -23,11 +23,11 @@ Map<String, dynamic> _$SignUpResponseBodyToJson(SignUpResponseBody instance) =>
     };
 
 UserData _$UserDataFromJson(Map<String, dynamic> json) => UserData(
-      email: json['email'] as String,
-      phone: (json['username'] as num).toInt(),
+      token: json['token'] as String,
+      userName: json['username'] as String,
     );
 
 Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
-      'email': instance.email,
-      'username': instance.phone,
+      'token': instance.token,
+      'username': instance.userName,
     };

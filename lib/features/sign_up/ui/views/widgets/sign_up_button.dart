@@ -56,8 +56,7 @@ class SignUpButton extends StatelessWidget {
             signUpRequestBody: SignUpRequestBody(
               name: context.read<SignUpCubit>().nameController.text,
               email: context.read<SignUpCubit>().emailController.text,
-              phoneNumber:
-                  int.parse(context.read<SignUpCubit>().phoneController.text),
+              phone: context.read<SignUpCubit>().phoneController.text,
               password: context.read<SignUpCubit>().passwordController.text,
               confirmPassword: context
                   .read<SignUpCubit>()
