@@ -9,3 +9,15 @@ void main() async {
   await setGetIt();
   runApp(DocApp(appRouter: AppRouter()));
 }
+
+// Running :
+// flutter run --flavor production -t lib/main_production.dart
+// flutter run --flavor development -t lib/main_development.dart
+
+// Release :
+
+// flutter build apk --flavor production -t lib/main_production.dart --release
+// flutter build apk --flavor development -t lib/main_development.dart --release
+
+// flutter build apk --flavor production -t lib/main_production.dart --debug
+// flutter build apk --flavor development -t lib/main_development.dart --debug
