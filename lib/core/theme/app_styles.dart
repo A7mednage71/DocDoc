@@ -59,4 +59,9 @@ class AppStyles {
     fontWeight: FontWeight.w500,
     color: const Color(0xffFFFFFF),
   );
+  static TextStyle interSemibold18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    color: const Color(0x0ff42424),
+  );
 }

@@ -1,3 +1,4 @@
+import 'package:doc/features/home/ui/views/widgets/doctor_custom_row.dart';
 import 'package:doc/features/home/ui/views/widgets/find_nearby.dart';
 import 'package:doc/features/home/ui/views/widgets/home_top_appBar.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,10 @@ class HomeScreen extends StatelessWidget {
                 height: 16.h,
               ),
               const FindNearByWidget(),
+              DoctorCustomRowWidget(
+                text: "Doctor Speciality",
+                onPressed: () {},
+              ),
             ],
           ),
         ),

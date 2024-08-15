@@ -1,9 +1,21 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsPngBrain
+  /// assets/png/Brain.svg
+  static const String assetsPngBrain = "assets/png/Brain.svg";
+
   /// Assets for assetsPngDoctorImage
   /// assets/png/doctor_Image.png
   static const String assetsPngDoctorImage = "assets/png/doctor_Image.png";
+
+  /// Assets for assetsPngKidneys
+  /// assets/png/Kidneys.svg
+  static const String assetsPngKidneys = "assets/png/Kidneys.svg";
+
+  /// Assets for assetsPngManDoctor
+  /// assets/png/ManDoctor.svg
+  static const String assetsPngManDoctor = "assets/png/ManDoctor.svg";
 
   /// Assets for assetsPngNotification
   /// assets/png/Notification.png
@@ -16,6 +28,10 @@ class Assets {
   /// Assets for assetsPngNurseImage
   /// assets/png/nurseImage.png
   static const String assetsPngNurseImage = "assets/png/nurseImage.png";
+
+  /// Assets for assetsPngPediatric
+  /// assets/png/pediatric.svg
+  static const String assetsPngPediatric = "assets/png/pediatric.svg";
 
   /// Assets for assetsPngSpalshLogo
   /// assets/png/spalshLogo.png
