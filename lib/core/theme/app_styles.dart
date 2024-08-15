@@ -31,6 +31,11 @@ class AppStyles {
     fontWeight: FontWeight.w500,
     color: const Color(0xffC2C2C2),
   );
+  static TextStyle fontweightInter500 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: const Color(0xff757575),
+  );
 
   static TextStyle font12with400w = TextStyle(
     fontSize: 12.sp,

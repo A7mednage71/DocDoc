@@ -13,9 +13,17 @@ class Assets {
   /// assets/png/doctor_Image.png
   static const String assetsPngDoctorImage = "assets/png/doctor_Image.png";
 
+  /// Assets for assetsPngDrRandy
+  /// assets/png/drRandy.png
+  static const String assetsPngDrRandy = "assets/png/drRandy.png";
+
   /// Assets for assetsPngKidneys
   /// assets/png/Kidneys.png
   static const String assetsPngKidneys = "assets/png/Kidneys.png";
+
+  /// Assets for assetsPngMagicStar
+  /// assets/png/magic-star.png
+  static const String assetsPngMagicStar = "assets/png/magic-star.png";
 
   /// Assets for assetsPngManDoctor
   /// assets/png/ManDoctor.png
