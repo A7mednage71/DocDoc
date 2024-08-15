@@ -1,4 +1,5 @@
 import 'package:doc/features/home/ui/views/widgets/doctor_custom_row.dart';
+import 'package:doc/features/home/ui/views/widgets/doctor_speciality_list_view.dart';
 import 'package:doc/features/home/ui/views/widgets/find_nearby.dart';
 import 'package:doc/features/home/ui/views/widgets/home_top_appBar.dart';
 import 'package:flutter/material.dart';
@@ -21,10 +22,17 @@ class HomeScreen extends StatelessWidget {
                 height: 16.h,
               ),
               const FindNearByWidget(),
+              SizedBox(
+                height: 24.h,
+              ),
               DoctorCustomRowWidget(
                 text: "Doctor Speciality",
                 onPressed: () {},
               ),
+              SizedBox(
+                height: 16.h,
+              ),
+              const DoctorSpecialityListView()
             ],
           ),
         ),
