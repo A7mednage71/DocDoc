@@ -10,7 +10,7 @@ class HomeTopAppBar extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
       title: Text(
-        "Hi, Omar!",
+        "Hi, Abo Nageh!",
         style: AppStyles.interBold18,
       ),
       subtitle: Text("How Are you Today?", style: AppStyles.interRegular11),
