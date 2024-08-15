@@ -8,6 +8,7 @@ class HomeTopAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.all(0),
       title: Text(
         "Hi, Omar!",
         style: AppStyles.interBold18,

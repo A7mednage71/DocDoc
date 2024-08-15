@@ -42,4 +42,21 @@ class AppStyles {
     fontWeight: FontWeight.w400,
     color: const Color(0xff9E9E9E),
   );
+
+  static TextStyle interBold18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    color: const Color(0xff000000),
+  );
+
+  static TextStyle interRegular11 = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w400,
+    color: const Color(0xff616161),
+  );
+  static TextStyle interMeduim18 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+    color: const Color(0xffFFFFFF),
+  );
 }
