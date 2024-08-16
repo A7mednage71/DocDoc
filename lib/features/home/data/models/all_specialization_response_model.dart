@@ -23,7 +23,7 @@ class AllspecializationResponseModel {
 class SpecializationItem {
   int? id;
   String? name;
-  List<Doctors>? doctors;
+  List<DoctorModel>? doctors;
 
   SpecializationItem({this.id, this.name, this.doctors});
 
@@ -34,7 +34,7 @@ class SpecializationItem {
 }
 
 @JsonSerializable()
-class Doctors {
+class DoctorModel {
   int? id;
   String? name;
   String? email;
@@ -50,7 +50,7 @@ class Doctors {
   String? startTime;
   String? endTime;
 
-  Doctors(
+  DoctorModel(
       {this.id,
       this.name,
       this.email,
@@ -66,10 +66,10 @@ class Doctors {
       this.startTime,
       this.endTime});
 
-  factory Doctors.fromJson(Map<String, dynamic> json) =>
-      _$DoctorsFromJson(json);
+  factory DoctorModel.fromJson(Map<String, dynamic> json) =>
+      _$DoctorModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DoctorsToJson(this);
+  Map<String, dynamic> toJson() => _$DoctorModelToJson(this);
 }
 
 @JsonSerializable()
