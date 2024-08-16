@@ -1,3 +1,5 @@
+import 'package:doc/core/helpers/app_constants.dart';
+import 'package:doc/core/helpers/shared_pref_helper.dart';
 import 'package:doc/features/home/ui/views/widgets/doctor_custom_row.dart';
 import 'package:doc/features/home/ui/views/widgets/doctor_speciality_blocBuilder.dart';
 import 'package:doc/features/home/ui/views/widgets/find_nearby.dart';
@@ -23,7 +25,9 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 24.h),
               DoctorCustomRowWidget(
                 text: "Doctor Speciality",
-                onPressed: () {},
+                onPressed: () async {
+                  await SharedPrefHelper.removeData(SharedPrefKeys.userToken);
+                },
               ),
               SizedBox(height: 16.h),
               const DoctorSpecialityListViewBlocBuilder(),
