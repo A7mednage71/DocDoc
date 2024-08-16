@@ -31,9 +31,12 @@ class DoctorSpecialityListViewBlocBuilder extends StatelessWidget {
             return Expanded(
               child: Column(
                 children: [
-                  const DoctorSpecialityListView(),
+                  DoctorSpecialityListView(
+                      allSpecializationData: data.allSpecializationData),
                   SizedBox(height: 24.h),
-                  const RecomendationDoctorListItemListView(),
+                  RecomendationDoctorListItemListView(
+                    doctors: data.allSpecializationData![0].doctors,
+                  ),
                 ],
               ),
             );

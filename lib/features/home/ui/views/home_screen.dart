@@ -27,11 +27,6 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 16.h),
               const DoctorSpecialityListViewBlocBuilder(),
-              // DoctorCustomRowWidget(
-              //   text: "Recommendation Doctor",
-              //   onPressed: () {},
-              // ),
-              SizedBox(height: 12.h),
             ],
           ),
         ),
