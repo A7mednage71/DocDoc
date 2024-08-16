@@ -18,7 +18,7 @@ class DoctorSpecialityListViewBlocBuilder extends StatelessWidget {
         return current is Loading || current is Failure || current is Success;
       },
       builder: (context, state) {
-        return state.maybeWhen(
+        return state.whenOrNull(
           loading: () {
             return const Center(
               child: CircularProgressIndicator(),
@@ -41,11 +41,39 @@ class DoctorSpecialityListViewBlocBuilder extends StatelessWidget {
               ),
             );
           },
-          orElse: () {
-            return const SizedBox.shrink();
-          },
-        );
+        ) ??
+            const SizedBox.shrink(); 
       },
     );
   }
 }
+
+
+
+  // return state.maybeWhen(
+        //   loading: () {
+        //     return const Center(
+        //       child: CircularProgressIndicator(),
+        //     );
+        //   },
+        //   failure: (error) {
+        //     return const SizedBox.shrink();
+        //   },
+        //   success: (data) {
+        //     return Expanded(
+        //       child: Column(
+        //         children: [
+        //           DoctorSpecialityListView(
+        //               allSpecializationData: data.allSpecializationData),
+        //           SizedBox(height: 24.h),
+        //           RecomendationDoctorListItemListView(
+        //             doctors: data.allSpecializationData![0].doctors,
+        //           ),
+        //         ],
+        //       ),
+        //     );
+        //   },
+        //   orElse: () {
+        //     return const SizedBox.shrink();
+        //   },
+        // );
