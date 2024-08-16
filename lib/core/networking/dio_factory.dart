@@ -5,7 +5,7 @@ class DioFactory {
   DioFactory._();
   static Dio? dio;
 
-  static Future<Dio> getDio()async {
+  static Future<Dio> getDio() async {
     Duration timeOut = const Duration(seconds: 30);
 
     if (dio == null) {
@@ -14,6 +14,12 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
       // for better readability and conversion.
+      dio!.options.headers = {
+        'Accept': 'application/json',
+        'Authorization':
+            'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzIzODIxMjI1LCJleHAiOjE3MjM5MDc2MjUsIm5iZiI6MTcyMzgyMTIyNSwianRpIjoidWZDcEhwSmhYQ29DRjZrWiIsInN1YiI6IjE4MTgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.IpIXf1aX8jzbkC6Gn5CtGGvj61pufxLwJDDVIk8iYxU',
+      };
+
       addDioInterceptors();
       return dio!;
     } else {
