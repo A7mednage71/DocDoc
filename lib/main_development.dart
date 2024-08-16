@@ -1,6 +1,6 @@
 import 'package:doc/core/di/dependency_injection.dart';
 import 'package:doc/core/helpers/app_constants.dart';
-import 'package:doc/core/helpers/shared_pref_helper.dart';
+import 'package:doc/core/helpers/secure_storage_helper.dart';
 import 'package:doc/core/routing/app_route.dart';
 import 'package:doc/doc_app.dart';
 import 'package:doc/firebase_options.dart';
@@ -22,8 +22,8 @@ void main() async {
 
 Future<void> checkForRegister() async {
   String? userToken =
-      await SharedPrefHelper.getString(SharedPrefKeys.userToken);
-      
+      await SecureStorageHelper.getSecuredData(SharedPrefKeys.userToken);
+
   debugPrint('userToken : $userToken');
   if (userToken != "" && userToken != null && userToken.isNotEmpty) {
     isRegistered = true;

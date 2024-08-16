@@ -1,5 +1,5 @@
 import 'package:doc/core/helpers/app_constants.dart';
-import 'package:doc/core/helpers/shared_pref_helper.dart';
+import 'package:doc/core/helpers/secure_storage_helper.dart';
 import 'package:doc/features/home/ui/views/widgets/doctor_custom_row.dart';
 import 'package:doc/features/home/ui/views/widgets/doctor_speciality_blocBuilder.dart';
 import 'package:doc/features/home/ui/views/widgets/find_nearby.dart';
@@ -26,7 +26,8 @@ class HomeScreen extends StatelessWidget {
               DoctorCustomRowWidget(
                 text: "Doctor Speciality",
                 onPressed: () async {
-                  await SharedPrefHelper.removeData(SharedPrefKeys.userToken);
+                  await SecureStorageHelper.removeSecuredData(
+                      SharedPrefKeys.userToken);
                 },
               ),
               SizedBox(height: 16.h),

@@ -11,7 +11,7 @@ class SecureStorageHelper {
   static getSecuredData(String key) async {
     debugPrint('FlutterSecureStorage : getSecuredData with key : $key');
     const storage = FlutterSecureStorage();
-    return await storage.read(key: key);
+    return await storage.read(key: key) ?? "";
   }
 
   static removeSecuredData(String key) async {
