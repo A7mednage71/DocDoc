@@ -1,5 +1,5 @@
 import 'package:doc/core/helpers/app_assets.dart';
-import 'package:doc/features/home/logic/doctor_peciality_item_model.dart';
+import 'package:doc/features/home/data/models/doctor_peciality_item_model.dart';
 import 'package:doc/features/home/ui/views/widgets/doctor_speciality_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
