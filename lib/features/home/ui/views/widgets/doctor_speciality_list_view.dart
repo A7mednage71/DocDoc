@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DoctorSpecialityListView extends StatelessWidget {
   const DoctorSpecialityListView({super.key, this.allSpecializationData});
-  final List<SpecializationItem>? allSpecializationData;
+  final List<SpecializationItem?>? allSpecializationData;
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +22,14 @@ class DoctorSpecialityListView extends StatelessWidget {
                       padding: EdgeInsets.only(right: 20.w, left: 8.w),
                       child: DoctorSpecialityItem(
                         image: Assets.assetsPngBaby,
-                        title: e.value.name!,
+                        title: e.value?.name,
                       ),
                     )
                   : Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20.w),
                       child: DoctorSpecialityItem(
                         image: Assets.assetsPngBaby,
-                        title: e.value.name!,
+                        title: e.value?.name,
                       ),
                     ),
             )

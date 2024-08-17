@@ -4,9 +4,9 @@ import 'package:doc/features/home/data/models/all_specialization_response_model.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class RecomendationDoctorListItem extends StatelessWidget {
-  const RecomendationDoctorListItem({super.key, required this.doctor});
-  final DoctorModel doctor;
+class DoctorListItem extends StatelessWidget {
+  const DoctorListItem({super.key, required this.doctor});
+  final DoctorModel? doctor;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,10 +21,10 @@ class RecomendationDoctorListItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Dr. ${doctor.name}",
+              Text("Dr. ${doctor?.name ?? "No Name"}",
                   style: AppStyles.interBold18.copyWith(fontSize: 16.sp)),
               SizedBox(height: 8.h),
-              Text(" ${doctor.degree}  |   ${doctor.phone}",
+              Text(" ${doctor?.degree ?? "No Degree"}  |   ${doctor?.phone ??"No Phone"}",
                   style: AppStyles.fontweightInter500),
               SizedBox(height: 12.h),
               Row(

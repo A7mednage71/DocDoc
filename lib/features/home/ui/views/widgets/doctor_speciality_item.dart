@@ -6,8 +6,8 @@ class DoctorSpecialityItem extends StatelessWidget {
   const DoctorSpecialityItem(
       {super.key, required this.title, required this.image});
 
-  final String title;
-  final String image;
+  final String? title;
+  final String? image;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +17,7 @@ class DoctorSpecialityItem extends StatelessWidget {
           backgroundColor: const Color(0xffF4F8FF),
           child: Center(
             child: Image.asset(
-              image,
+            image ??"",
               height: 24.h,
               width: 24.w,
             ),
@@ -25,7 +25,7 @@ class DoctorSpecialityItem extends StatelessWidget {
         ),
         SizedBox(height: 12.h),
         Text(
-          title,
+          title??"No Title",
           style:
               AppStyles.font12with400w.copyWith(color: const Color(0xff242424)),
         )
