@@ -43,6 +43,7 @@ class _DoctorSpecialityListViewState extends State<DoctorSpecialityListView> {
                   child: DoctorSpecialityItem(
                     image: Assets.assetsPngBaby,
                     title: e.value?.name,
+                    isSelected: e.key == selectedIndex,
                   ),
                 ),
               ),
