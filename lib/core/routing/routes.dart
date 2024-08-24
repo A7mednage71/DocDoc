@@ -3,4 +3,6 @@ class Routes {
   static const String loginView = "loginView";
   static const String signUP = "sign_up";
   static const String homeView = "homeView";
+  static const String notificationView = "notificationView";
+  static const String chatView = "chatView";
 }

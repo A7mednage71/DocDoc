@@ -5,6 +5,8 @@ import 'package:doc/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 class DocApp extends StatelessWidget {
   const DocApp({super.key, required this.appRouter});
   final AppRouter appRouter;
@@ -14,6 +16,7 @@ class DocApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
+        navigatorKey: navigatorKey,
         theme: ThemeData(
             primaryColor: AppColors.mainColor,
             scaffoldBackgroundColor: Colors.white),

@@ -1,13 +1,16 @@
 import 'package:doc/core/di/dependency_injection.dart';
 import 'package:doc/core/routing/routes.dart';
+import 'package:doc/features/chat_screen.dart';
 import 'package:doc/features/home/data/repos/home_repo.dart';
 import 'package:doc/features/home/ui/views/home_screen.dart';
 import 'package:doc/features/home/ui/views/manager/cubit/home_cubit.dart';
 import 'package:doc/features/login/ui/manager/cubit/login_cubit.dart';
 import 'package:doc/features/login/ui/views/login_screen.dart';
+import 'package:doc/features/notification_screen.dart';
 import 'package:doc/features/onboarding/onboarding.dart';
 import 'package:doc/features/sign_up/ui/manager/cubit/sign_up_cubit.dart';
 import 'package:doc/features/sign_up/ui/views/sign_up.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -39,6 +42,16 @@ class AppRouter {
                 HomeCubit(getIt.get<HomeRepo>())..getAllSpecialization(),
             child: const HomeScreen(),
           ),
+        );
+      case Routes.notificationView:
+        RemoteMessage message = settings.arguments as RemoteMessage;
+        return MaterialPageRoute(
+          builder: (context) => NotificationScreen(message: message),
+        );
+      case Routes.chatView:
+        RemoteMessage message = settings.arguments as RemoteMessage;
+        return MaterialPageRoute(
+          builder: (context) => ChatScreen(message: message),
         );
       default:
         return MaterialPageRoute(
