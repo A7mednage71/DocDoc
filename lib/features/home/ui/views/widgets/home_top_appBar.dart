@@ -17,8 +17,13 @@ class HomeTopAppBar extends StatelessWidget {
       subtitle: Text("How Are you Today?", style: AppStyles.interRegular11),
       trailing: GestureDetector(
           onTap: () async {
-            await FirebaseMessagingHelper().sendNotifications(
-                title: "Doc Doc", notificationBody: "Lets Start our Meeting");
+            // await FirebaseMessagingHelper().sendNotifications(
+            //     title: "Doc Doc", notificationBody: "Lets Start our Meeting");
+            await FirebaseMessagingHelper().sendNotificationsToTopic(
+              title: "Doc Doc",
+              notificationBody: "Lets Start our Meeting",
+              topic: "Doctors",
+            );
           },
           child: Image.asset(Assets.assetsPngNotification)),
     );

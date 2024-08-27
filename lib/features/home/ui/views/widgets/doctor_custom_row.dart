@@ -1,3 +1,4 @@
+import 'package:doc/core/helpers/notifications/firebase_messaging.dart';
 import 'package:doc/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,9 @@ class DoctorCustomRowWidget extends StatelessWidget {
       children: [
         Text(text, style: AppStyles.interBold18),
         TextButton(
-          onPressed: onPressed,
+          onPressed: () async {
+            await FirebaseMessagingHelper().subscribeToTopic();
+          },
           child: Text("See All", style: AppStyles.font12with400w),
         )
       ],
