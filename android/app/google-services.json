@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "557093459184",
+    "project_id": "docdoc-distribution-cfe82",
+    "storage_bucket": "docdoc-distribution-cfe82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557093459184:android:a5202fd6b5cac17fb49e35",
+        "android_client_info": {
+          "package_name": "com.example.doc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3c8TPGoGFFrgoVqZIK5QWeW1kaOWdqYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557093459184:android:ce832cba68151306b49e35",
+        "android_client_info": {
+          "package_name": "com.example.doc.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3c8TPGoGFFrgoVqZIK5QWeW1kaOWdqYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
